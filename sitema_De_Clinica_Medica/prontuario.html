@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Vitalis - Prontuário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO DA PÁGINA -->
+    <header class="cabecalho-principal">
+        <div class="logo">🏥 CLÍNICA VITALIS</div>
+        <input type="text" id="barra-busca" class="barra-busca" placeholder="🔍 Buscar paciente...">
+        <div class="icone-usuario">👤 Prontuário</div>
+    </header>
+
+    <!-- CONTEINER PRINCIPAL -->
+    <div class="container-layout">
+
+        <!-- MENU LATERAL -->
+        <nav class="menu-lateral">
+            <ul class="lista-menu">
+                <li><a href="index.html">🏠 Painel</a></li>
+                <li><a href="cadastro_Paciente.html">🧍 Pacientes</a></li>
+                <li><a href="cadastro_Medico.html">🩺 Médicos</a></li>
+                <li><a href="agenda.html">📅 Agenda</a></li>
+                <li><a href="relatorios.html">📊 Relatórios</a></li>
+                <li><a href="prontuario.html" class="ativo">📋 Prontuário</a></li>
+            </ul>
+        </nav>
+
+        <!-- CONTEÚDO CENTRAL -->
+        <main class="conteudo-principal">
+
+            <h2>Prontuário Médico</h2>
+            <p>Registro clínico do atendimento:</p>
+
+            <!-- DADOS DO PACIENTE E ATENDIMENTO -->
+            <section class="card-bloco">
+                <div class="cabecalho-prontuario">
+                    <div class="dado-paciente">
+                        <span class="rotulo">Paciente</span>
+                        <span class="valor-dado">Ana Paula Ferreira</span>
+                    </div>
+                    <div class="dado-paciente">
+                        <span class="rotulo">Leito</span>
+                        <span class="valor-dado">Leito 1</span>
+                    </div>
+                    <div class="dado-paciente">
+                        <span class="rotulo">Nascimento</span>
+                        <span class="valor-dado">28/06/2005</span>
+                    </div>
+                    <div class="dado-paciente">
+                        <span class="rotulo">Data do Atendimento</span>
+                        <span class="valor-dado">03/09/2026</span>
+                    </div>
+                </div>
+
+                <!-- SINAIS VITAIS -->
+                <div class="sinais-vitais">
+                    <div class="caixa-sinal">
+                        <p class="valor">36,7°C</p>
+                        <p class="rotulo">Temperatura</p>
+                    </div>
+                    <div class="caixa-sinal">
+                        <p class="valor">98%</p>
+                        <p class="rotulo">Saturação O2</p>
+                    </div>
+                    <div class="caixa-sinal">
+                        <p class="valor">74 bpm</p>
+                        <p class="rotulo">Frequência Cardíaca</p>
+                    </div>
+                    <div class="caixa-sinal">
+                        <p class="valor">12/8</p>
+                        <p class="rotulo">Pressão Arterial</p>
+                    </div>
+                </div>
+
+                <!-- CONDUTA E BALANÇO HÍDRICO -->
+                <form>
+                    <div class="linha-form">
+                        <div class="campo" style="flex-basis: 100%;">
+                            <label for="conduta">Conduta</label>
+                            <textarea id="conduta" name="conduta" rows="3" placeholder="Descreva a conduta médica adotada">Paciente encaminhada para consulta de rotina, sem queixas no momento.</textarea>
+                        </div>
+                    </div>
+
+                    <div class="linha-form">
+                        <div class="campo">
+                            <label for="balanco">Balanço Hídrico</label>
+                            <input type="text" id="balanco" name="balanco" placeholder="Ex: 500ml administrado / 300ml eliminado">
+                        </div>
+                        <div class="campo">
+                            <label for="alergias">Alergias e Condições</label>
+                            <input type="text" id="alergias" name="alergias" placeholder="Ex: alergia a dipirona">
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <!-- PRESCRIÇÃO MÉDICA -->
+            <section class="card-bloco">
+                <div class="cabecalho-bloco">
+                    <h2>Prescrição Médica</h2>
+                    <button type="button" class="btn-salvar">🖨️ Imprimir Receita</button>
+                </div>
+
+                <table class="tabela-padrao">
+                    <thead>
+                        <tr>
+                            <th>Medicamento</th>
+                            <th>Dosagem</th>
+                            <th>Via</th>
+                            <th>Horário</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Paracetamol</td>
+                            <td>750mg</td>
+                            <td>Oral</td>
+                            <td>8 em 8 horas</td>
+                        </tr>
+                        <tr>
+                            <td>Soro Fisiológico</td>
+                            <td>500ml</td>
+                            <td>Intravenosa</td>
+                            <td>Uma vez ao dia</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <form>
+                    <div class="linha-form" style="margin-top: 14px;">
+                        <div class="campo">
+                            <label for="medicamento">Medicamento</label>
+                            <input type="text" id="medicamento" name="medicamento" placeholder="Nome do medicamento">
+                        </div>
+                        <div class="campo">
+                            <label for="dosagem">Dosagem</label>
+                            <input type="text" id="dosagem" name="dosagem" placeholder="Ex: 500mg">
+                        </div>
+                        <div class="campo">
+                            <label for="via">Via</label>
+                            <select id="via" name="via">
+                                <option>Oral</option>
+                                <option>Intravenosa</option>
+                                <option>Intramuscular</option>
+                                <option>Tópica</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="linha-form">
+                        <button type="submit" class="btn-salvar">Adicionar Medicamento</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- ASSINATURA DO RESPONSÁVEL -->
+            <section class="card-bloco">
+                <div class="assinatura-medica">
+                    Responsável técnico: <strong>Dr. Rodrigo Prado</strong> — Cardiologista — CRM 12345/MG
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        Clínica Vitalis - Sistema de Gestão © 2026
+    </footer>
+
+</body>
+</html>

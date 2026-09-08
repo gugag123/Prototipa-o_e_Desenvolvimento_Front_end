@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Vitalis - Painel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO DA PÁGINA -->
+    <header class="cabecalho-principal">
+        <div class="logo">🏥 CLÍNICA VITALIS</div>
+        <input type="text" id="barra-busca" class="barra-busca" placeholder="🔍 Buscar paciente...">
+        <div class="icone-usuario">👤 Recepção</div>
+    </header>
+
+    <!-- CONTEINER PRINCIPAL -->
+    <div class="container-layout">
+
+        <!-- MENU LATERAL -->
+        <nav class="menu-lateral">
+            <ul class="lista-menu">
+                <li><a href="index.html" class="ativo">🏠 Painel</a></li>
+                <li><a href="cadastro_Paciente.html">🧍 Pacientes</a></li>
+                <li><a href="cadastro_Medico.html">🩺 Médicos</a></li>
+                <li><a href="agenda.html">📅 Agenda</a></li>
+                <li><a href="relatorios.html">📊 Relatórios</a></li>
+                <li><a href="prontuario.html">📋 Prontuário</a></li>
+            </ul>
+        </nav>
+
+        <!-- CONTEÚDO CENTRAL -->
+        <main class="conteudo-principal">
+
+            <h2>Painel Geral</h2>
+            <p>Resumo do dia na clínica:</p>
+
+            <!-- CARDS DE INDICADORES -->
+            <section class="container-indicadores">
+                <article class="card-indicador">
+                    <p class="valor">18</p>
+                    <p class="legenda">Consultas hoje</p>
+                </article>
+
+                <article class="card-indicador">
+                    <p class="valor">34</p>
+                    <p class="legenda">Consultas na semana</p>
+                </article>
+
+                <article class="card-indicador">
+                    <p class="valor">16</p>
+                    <p class="legenda">Consultas novas</p>
+                </article>
+
+                <article class="card-indicador">
+                    <p class="valor">6,2%</p>
+                    <p class="legenda">Taxa de cancelamento</p>
+                </article>
+            </section>
+
+            <!-- RESUMO DE AGENDAMENTOS -->
+            <section class="card-bloco">
+                <div class="cabecalho-bloco">
+                    <h2>Resumo de Agendamentos</h2>
+                    <a href="relatorios.html" class="btn-cancelar" style="text-decoration:none;">Ver relatório completo</a>
+                </div>
+
+                <table class="tabela-padrao">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Paciente</th>
+                            <th>Médico</th>
+                            <th>Especialidade</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>201</td>
+                            <td>Joicelmo</td>
+                            <td>Dr. Fabio</td>
+                            <td>Cardiologia</td>
+                            <td>02/09/26</td>
+                        </tr>
+                        <tr>
+                            <td>202</td>
+                            <td>Eusébio</td>
+                            <td>Dr. Jorge</td>
+                            <td>Neurologia</td>
+                            <td>02/09/26</td>
+                        </tr>
+                        <tr>
+                            <td>203</td>
+                            <td>Manoella</td>
+                            <td>Dra. Mariana</td>
+                            <td>Dermatologia</td>
+                            <td>03/09/26</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        Clínica Vitalis - Sistema de Gestão © 2026
+    </footer>
+
+</body>
+</html>

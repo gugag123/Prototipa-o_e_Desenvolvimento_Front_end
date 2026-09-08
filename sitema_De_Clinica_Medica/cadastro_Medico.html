@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Vitalis - Médicos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO DA PÁGINA -->
+    <header class="cabecalho-principal">
+        <div class="logo">🏥 CLÍNICA VITALIS</div>
+        <input type="text" id="barra-busca" class="barra-busca" placeholder="🔍 Buscar médico...">
+        <div class="icone-usuario">👤 Recepção</div>
+    </header>
+
+    <!-- CONTEINER PRINCIPAL -->
+    <div class="container-layout">
+
+        <!-- MENU LATERAL -->
+        <nav class="menu-lateral">
+            <ul class="lista-menu">
+                <li><a href="index.html">🏠 Painel</a></li>
+                <li><a href="cadastro_Paciente.html">🧍 Pacientes</a></li>
+                <li><a href="cadastro_Medico.html" class="ativo">🩺 Médicos</a></li>
+                <li><a href="agenda.html">📅 Agenda</a></li>
+                <li><a href="relatorios.html">📊 Relatórios</a></li>
+                <li><a href="prontuario.html">📋 Prontuário</a></li>
+            </ul>
+        </nav>
+
+        <!-- CONTEÚDO CENTRAL -->
+        <main class="conteudo-principal">
+
+            <h2>Médicos</h2>
+            <p>Cadastro, edição e inclusão de médicos da clínica:</p>
+
+            <!-- FORMULÁRIO DE NOVO CADASTRO -->
+            <section class="card-bloco">
+                <div class="cabecalho-bloco">
+                    <h2>Novo Cadastro</h2>
+                </div>
+
+                <form>
+                    <div class="linha-form">
+                        <div class="campo">
+                            <label for="nome-medico">Nome</label>
+                            <input type="text" id="nome-medico" name="nome" placeholder="Nome completo do médico" required>
+                        </div>
+                        <div class="campo">
+                            <label for="cpf-medico">CPF</label>
+                            <input type="text" id="cpf-medico" name="cpf" placeholder="000.000.000-00" required>
+                        </div>
+                    </div>
+
+                    <div class="linha-form">
+                        <div class="campo">
+                            <label for="telefone-medico">Telefone</label>
+                            <input type="tel" id="telefone-medico" name="telefone" placeholder="(31) 90000-0000" required>
+                        </div>
+                        <div class="campo">
+                            <label for="crm">CRM</label>
+                            <input type="text" id="crm" name="crm" placeholder="000.000" required>
+                        </div>
+                    </div>
+
+                    <div class="linha-form">
+                        <div class="campo">
+                            <label for="especialidade">Especialidade</label>
+                            <select id="especialidade" name="especialidade" required>
+                                <option value="" disabled selected>Selecione</option>
+                                <option>Cardiologia</option>
+                                <option>Neurologia</option>
+                                <option>Dermatologia</option>
+                                <option>Pediatria</option>
+                                <option>Clínico Geral</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="endereco-medico">Endereço</label>
+                            <input type="text" id="endereco-medico" name="endereco" placeholder="Rua, número, bairro">
+                        </div>
+                    </div>
+
+                    <div class="linha-form">
+                        <button type="submit" class="btn-salvar">Salvar Cadastro</button>
+                        <button type="reset" class="btn-cancelar">Cancelar</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- LISTAGEM DE MÉDICOS CADASTRADOS -->
+            <section class="card-bloco">
+                <div class="cabecalho-bloco">
+                    <h2>Médicos Cadastrados</h2>
+                    <span style="font-size:13px; color:#7f8c8d;">3 registros encontrados</span>
+                </div>
+
+                <table class="tabela-padrao">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nome</th>
+                            <th>CPF</th>
+                            <th>Telefone</th>
+                            <th>Especialidade</th>
+                            <th>CRM</th>
+                            <th>Endereço</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Dr. Fabio</td>
+                            <td>000.000.000-00</td>
+                            <td>(31) 98003-0000</td>
+                            <td>Cardiologia</td>
+                            <td>000.000</td>
+                            <td>Centro</td>
+                            <td class="acoes">
+                                <button class="btn-editar">Editar</button>
+                                <button class="btn-excluir">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Dr. Jorge</td>
+                            <td>000.000.000-00</td>
+                            <td>(31) 91800-0000</td>
+                            <td>Neurologia</td>
+                            <td>000.000</td>
+                            <td>Centro</td>
+                            <td class="acoes">
+                                <button class="btn-editar">Editar</button>
+                                <button class="btn-excluir">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>Dra. Mariana</td>
+                            <td>000.000.000-00</td>
+                            <td>(31) 96000-0388</td>
+                            <td>Dermatologia</td>
+                            <td>000.000</td>
+                            <td>Centro</td>
+                            <td class="acoes">
+                                <button class="btn-editar">Editar</button>
+                                <button class="btn-excluir">Excluir</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        Clínica Vitalis - Sistema de Gestão © 2026
+    </footer>
+
+</body>
+</html>

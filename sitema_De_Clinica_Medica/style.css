@@ -1,0 +1,409 @@
+/* =========================================
+   1. CONFIGURAÇÕES GERAIS
+   ========================================= */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* =========================================
+   2. CABEÇALHO (FLEXBOX)
+   ========================================= */
+.cabecalho-principal {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.barra-busca {
+    width: 35%;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+}
+
+.icone-usuario {
+    font-size: 22px;
+}
+
+/* =========================================
+   3. ESTRUTURA DO LAYOUT (CSS GRID)
+   ========================================= */
+.container-layout {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* =========================================
+   4. MENU LATERAL (FLEXBOX)
+   ========================================= */
+.menu-lateral {
+    border-right: 2px solid #e2e8f0;
+    padding-right: 15px;
+    height: fit-content;
+}
+
+.lista-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.lista-menu li a {
+    display: block;
+    padding: 12px 15px;
+    background-color: #ffffff;
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.lista-menu li a:hover {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.lista-menu li a.ativo {
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* =========================================
+   5. CONTEÚDO CENTRAL
+   ========================================= */
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Cartões de indicadores do dashboard (GRID) */
+.container-indicadores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.card-indicador {
+    background-color: #ffffff;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #2c3e50;
+}
+
+.card-indicador .valor {
+    font-size: 26px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.card-indicador .legenda {
+    font-size: 13px;
+    color: #7f8c8d;
+    margin: 0;
+}
+
+/* Bloco de conteúdo genérico (formulário, tabela, texto) */
+.card-bloco {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card-bloco h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+/* Cabeçalho do bloco com título + botão (FLEXBOX) */
+.cabecalho-bloco {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Tabelas */
+.tabela-padrao {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-padrao th, .tabela-padrao td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.tabela-padrao th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.tabela-padrao tr:hover {
+    background-color: #f0f3f6;
+}
+
+.tabela-padrao td.acoes {
+    display: flex;
+    gap: 6px;
+}
+
+/* =========================================
+   6. BOTÕES
+   ========================================= */
+.btn-salvar {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-salvar:hover {
+    background-color: #219150;
+}
+
+.btn-cancelar {
+    background-color: #f0f3f6;
+    color: #2c3e50;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-editar {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.btn-excluir {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* =========================================
+   7. FORMULÁRIOS
+   ========================================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.linha-form {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+    min-width: 180px;
+}
+
+.campo label {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.campo input, .campo select, .campo textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* =========================================
+   8. AGENDA (GRADE DE HORÁRIOS)
+   ========================================= */
+.filtros-agenda {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.tabela-agenda {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-agenda th, .tabela-agenda td {
+    border: 1px solid #e2e8f0;
+    padding: 8px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.tabela-agenda th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.tabela-agenda td.horario {
+    background-color: #f0f3f6;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.status-livre {
+    background-color: #eafaf1;
+    color: #27ae60;
+    font-weight: 600;
+}
+
+.status-agendado {
+    background-color: #eaf6ff;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.status-bloqueado {
+    background-color: #fdecea;
+    color: #c0392b;
+    font-weight: 600;
+}
+
+.legenda-status {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+.legenda-status span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.bolinha {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* =========================================
+   9. PRONTUÁRIO
+   ========================================= */
+.cabecalho-prontuario {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 14px;
+}
+
+.dado-paciente .rotulo {
+    font-size: 12px;
+    color: #7f8c8d;
+    display: block;
+}
+
+.dado-paciente .valor-dado {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Caixas de sinais vitais (GRID) */
+.sinais-vitais {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.caixa-sinal {
+    background-color: #f0f3f6;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+}
+
+.caixa-sinal .valor {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.caixa-sinal .rotulo {
+    font-size: 12px;
+    color: #7f8c8d;
+}
+
+.assinatura-medica {
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px dashed #ccc;
+    font-size: 13px;
+    color: #555;
+}
+
+/* =========================================
+   10. RODAPÉ
+   ========================================= */
+.rodape {
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+    color: #7f8c8d;
+}

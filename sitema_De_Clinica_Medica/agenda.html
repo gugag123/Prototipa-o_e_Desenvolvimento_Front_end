@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Vitalis - Agenda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO DA PÁGINA -->
+    <header class="cabecalho-principal">
+        <div class="logo">🏥 CLÍNICA VITALIS</div>
+        <input type="text" id="barra-busca" class="barra-busca" placeholder="🔍 Buscar paciente...">
+        <div class="icone-usuario">👤 Recepção</div>
+    </header>
+
+    <!-- CONTEINER PRINCIPAL -->
+    <div class="container-layout">
+
+        <!-- MENU LATERAL -->
+        <nav class="menu-lateral">
+            <ul class="lista-menu">
+                <li><a href="index.html">🏠 Painel</a></li>
+                <li><a href="cadastro_Paciente.html">🧍 Pacientes</a></li>
+                <li><a href="cadastro_Medico.html">🩺 Médicos</a></li>
+                <li><a href="agenda.html" class="ativo">📅 Agenda</a></li>
+                <li><a href="relatorios.html">📊 Relatórios</a></li>
+                <li><a href="prontuario.html">📋 Prontuário</a></li>
+            </ul>
+        </nav>
+
+        <!-- CONTEÚDO CENTRAL -->
+        <main class="conteudo-principal">
+
+            <h2>Agendamento de Consultas</h2>
+            <p>Visualize os horários e marque uma nova consulta:</p>
+
+            <!-- GRADE DE HORÁRIOS DA SEMANA -->
+            <section class="card-bloco">
+                <div class="cabecalho-bloco">
+                    <h2>Horários da Semana</h2>
+                    <button class="btn-salvar" type="button">+ Novo Agendamento</button>
+                </div>
+
+                <!-- FILTROS -->
+                <div class="filtros-agenda">
+                    <div class="campo">
+                        <label for="filtro-medico">Médico</label>
+                        <select id="filtro-medico">
+                            <option>Todos</option>
+                            <option>Dr. Fabio</option>
+                            <option>Dr. Jorge</option>
+                            <option>Dra. Mariana</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="filtro-especialidade">Especialidade</label>
+                        <select id="filtro-especialidade">
+                            <option>Todas</option>
+                            <option>Cardiologia</option>
+                            <option>Neurologia</option>
+                            <option>Dermatologia</option>
+                        </select>
+                    </div>
+                </div>
+
+                <table class="tabela-agenda">
+                    <thead>
+                        <tr>
+                            <th>Horário</th>
+                            <th>Seg 01/09</th>
+                            <th>Ter 02/09</th>
+                            <th>Qua 03/09</th>
+                            <th>Qui 04/09</th>
+                            <th>Sex 05/09</th>
+                            <th>Sáb 06/09</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="horario">08:00</td>
+                            <td class="status-agendado">Ana Paula<br>Consulta de rotina</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-bloqueado">Bloqueado</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-livre">Livre</td>
+                        </tr>
+                        <tr>
+                            <td class="horario">09:00</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-agendado">Fernanda Lima<br>Reavaliação</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-livre">Livre</td>
+                        </tr>
+                        <tr>
+                            <td class="horario">11:00</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-agendado">Carla Edwards<br>Exame ECG</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-livre">Livre</td>
+                        </tr>
+                        <tr>
+                            <td class="horario">12:00</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-livre">Livre</td>
+                        </tr>
+                        <tr>
+                            <td class="horario">16:00</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-agendado">Gustavo Eduardo<br>Retorno</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-livre">Livre</td>
+                        </tr>
+                        <tr>
+                            <td class="horario">17:00</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-agendado">Rafael Alves<br>Emergência</td>
+                            <td class="status-livre">Livre</td>
+                            <td class="status-livre">Livre</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- LEGENDA DE STATUS -->
+                <div class="legenda-status">
+                    <span><span class="bolinha" style="background-color:#27ae60;"></span> Livre</span>
+                    <span><span class="bolinha" style="background-color:#2c3e50;"></span> Agendado</span>
+                    <span><span class="bolinha" style="background-color:#c0392b;"></span> Bloqueado</span>
+                </div>
+            </section>
+
+            <!-- FORMULÁRIO DE NOVO AGENDAMENTO -->
+            <section class="card-bloco">
+                <div class="cabecalho-bloco">
+                    <h2>Novo Agendamento</h2>
+                </div>
+
+                <form>
+                    <div class="linha-form">
+                        <div class="campo">
+                            <label for="paciente-ag">Paciente</label>
+                            <input type="text" id="paciente-ag" name="paciente" placeholder="Nome do paciente" required>
+                        </div>
+                        <div class="campo">
+                            <label for="medico-ag">Médico</label>
+                            <select id="medico-ag" name="medico" required>
+                                <option>Dr. Fabio</option>
+                                <option>Dr. Jorge</option>
+                                <option>Dra. Mariana</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="linha-form">
+                        <div class="campo">
+                            <label for="data-ag">Data</label>
+                            <input type="date" id="data-ag" name="data" required>
+                        </div>
+                        <div class="campo">
+                            <label for="hora-ag">Horário</label>
+                            <input type="time" id="hora-ag" name="hora" required>
+                        </div>
+                    </div>
+
+                    <div class="linha-form">
+                        <button type="submit" class="btn-salvar">Confirmar Agendamento</button>
+                        <button type="reset" class="btn-cancelar">Cancelar</button>
+                    </div>
+                </form>
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        Clínica Vitalis - Sistema de Gestão © 2026
+    </footer>
+
+</body>
+</html>
