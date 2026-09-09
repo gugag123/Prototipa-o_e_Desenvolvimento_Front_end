@@ -71,7 +71,7 @@ A implementação da interface segue os padrões estritos do HTML5 e CSS3:
 ## 🗄️ 5. Banco de Dados (MySQL)
 O banco de dados relacional `clinica_vitalis` foi modelado para suportar todas as operações da clínica.
 
-> 🗃️ **Script de Criação:** [📄 Clique aqui para visualizar o código SQL (./sitema_De_Clinica_Medica/Sistema_Clinica_Medica.sql)]
+> 🗃️ **Script de Criação:** [📄 Clique aqui para visualizar o código SQL (`Sistema_Clinica_Medica.sql`)](./sitema_De_Clinica_Medica/Sistema_Clinica_Medica.sql)
 
 ### 📐 Estrutura de Tabelas e Entidades:
 * `especialidades`: Registro das áreas médicas.
